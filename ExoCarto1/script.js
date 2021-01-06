@@ -9,6 +9,8 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
 
+  console.log(crd);
+
   console.log('Votre position actuelle est :');
   console.log('Latitude : '+crd.latitude);
   console.log('Longitude : '+crd.longitude);
@@ -23,4 +25,4 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 id = navigator.geolocation.watchPosition(success, error, options);
 
-console.log(id);
+//console.log(id);
