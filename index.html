@@ -9,9 +9,10 @@
 		<p>Ceci est une page html</p>
 		<script>
 			function showMap(position){
-				
+
 			}
 			navigator.geolocation.getCurrentPosition(showMap);
+			navigator.geolocation.watchPosition(showMap);
 		</script>
 	</body>
 </html>
