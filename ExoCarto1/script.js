@@ -11,6 +11,12 @@ function success(pos) {
 
   console.log(crd);
 
+  $("#ex1").append(
+    $("<p>Latitude : "+crd.latitude+"</p>"),
+    $("<p>Longitude : "+crd.longitude+"</p>"),
+    $("<p>La précision est de : "+crd.accuracy+"</p>")
+  )
+
   console.log('Votre position actuelle est :');
   console.log('Latitude : '+crd.latitude);
   console.log('Longitude : '+crd.longitude);
