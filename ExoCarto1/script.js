@@ -26,7 +26,17 @@ function deviceOrientationHandler(event){
   document.getElementById("gam").innerHTML = 'Gamma :'+event.gamma;
 }
 
+function deviceMotionHandler(event){
+  document.getElementById("acc").innerHTML = 'Accélération :'+event.acceleration;
+  document.getElementById("rot").innerHTML = 'Rotation :'+event.rotationRate;
+}
+
 if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', deviceOrientationHandler, false);
   document.getElementById("doeSupported").innerText = "Supported!";
+}
+
+if (window.DeviceMotionEvent) {
+  window.addEventListener('devicemotion', deviceMotionHandler);
+  setTimeout(stopJump, 3*1000);
 }
