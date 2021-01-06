@@ -9,11 +9,11 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
 
-  var latPos = document.createElementByTag('p');
+  var latPos = document.createElement('p');
   latPos.text = 'Latitude : '+crd.latitude;
   var divLat = document.getElementById('divLat');
   divLat.appendChild(latPos);
-  
+
   console.log('Votre position actuelle est :');
   console.log('Latitude : '+crd.latitude);
   console.log('Longitude : '+crd.longitude);
