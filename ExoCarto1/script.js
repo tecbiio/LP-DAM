@@ -11,17 +11,23 @@ function success(pos) {
 
   var divCoords = document.getElementById('divCoords');
   if (divCoords !== null){
+    var elem;
     var latPos = document.createElement("p");
-    var elem = divCoords.appendChild(latPos);
-    latPos.textContent = 'Latitude : '+crd.latitude;
+    var lonPos = document.createElement("p");
+    var accPos = document.createElement("p");
+    var spePos = document.createElement("p");
+    var timPos = document.createElement("p");
+    elem = divCoords.appendChild(latPos);
+    elem.textContent = 'Latitude : '+crd.latitude;
+    elem = divCoords.appendChild(lonPos);
+    elem.textContent = 'Latitude : '+crd.longitude;
+    elem = divCoords.appendChild(accPos);
+    elem.textContent = 'Latitude : '+crd.accuracy;
+    elem = divCoords.appendChild(spePos);
+    elem.textContent = 'Latitude : '+crd.speed;
+    elem = divCoords.appendChild(timPos);
+    elem.textContent = 'Latitude : '+crd.timestamp;
   }
-
-  console.log('Votre position actuelle est :');
-  console.log('Latitude : '+crd.latitude);
-  console.log('Longitude : '+crd.longitude);
-  console.log('La précision : '+crd.accuracy);
-  console.log('Vitesse : '+crd.speed);
-  console.log('TimeStamp : '+crd.timestamp);
 }
 
 function error(err) {
@@ -30,4 +36,4 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
-id = navigator.geolocation.watchPosition(success, error, options);
+//id = navigator.geolocation.watchPosition(success, error, options);
