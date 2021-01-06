@@ -1,4 +1,4 @@
-var id;
+console.log("getCurrentPosition");
 
 var options = {
   enableHighAccuracy: true,
@@ -9,12 +9,12 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
 
-  console.log(crd);
-
   console.log('Votre position actuelle est :');
   console.log('Latitude : '+crd.latitude);
   console.log('Longitude : '+crd.longitude);
-  console.log('La précision est de '+crd.accuracy+' mètres.');
+  console.log('La précision : '+crd.accuracy);
+  console.log('Vitesse : '+crd.speed);
+  console.log('TimeStamp : '+crd.timestamp);
 }
 
 function error(err) {
@@ -23,6 +23,8 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
-id = navigator.geolocation.watchPosition(success, error, options);
+console.log("watchPosition");
 
-//console.log(id);
+var id;
+
+id = navigator.geolocation.watchPosition(success, error, options);
