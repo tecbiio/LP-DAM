@@ -20,13 +20,13 @@ function success(pos) {
     elem = divCoords.appendChild(latPos);
     elem.textContent = 'Latitude : '+crd.latitude;
     elem = divCoords.appendChild(lonPos);
-    elem.textContent = 'Latitude : '+crd.longitude;
+    elem.textContent = 'Longitude : '+crd.longitude;
     elem = divCoords.appendChild(accPos);
-    elem.textContent = 'Latitude : '+crd.accuracy;
+    elem.textContent = 'Précision : '+crd.accuracy;
     elem = divCoords.appendChild(spePos);
-    elem.textContent = 'Latitude : '+crd.speed;
+    elem.textContent = 'Vitesse : '+crd.speed;
     elem = divCoords.appendChild(timPos);
-    elem.textContent = 'Latitude : '+crd.timestamp;
+    elem.textContent = 'TimeStamp : '+crd.timestamp;
   }
 }
 
