@@ -20,12 +20,13 @@ function errorGeo(err) {
 
 navigator.geolocation.watchPosition(successGeo, errorGeo, optionsGeo);
 
+function deviceOrientationHandler(event){
+  document.getElementById("alp").innerHTML = 'Alpha :'+event.alpha;
+  document.getElementById("bet").innerHTML = 'Beta :'+event.beta;
+  document.getElementById("gam").innerHTML = 'Gamma :'+event.gamma;
+}
+
 if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', deviceOrientationHandler, false);
   document.getElementById("doeSupported").innerText = "Supported!";
-}
-
-if (window.DeviceMotionEvent) {
-  window.addEventListener('devicemotion', deviceMotionHandler);
-  setTimeout(stopJump, 3*1000);
 }
