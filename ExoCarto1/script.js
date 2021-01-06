@@ -11,8 +11,8 @@ function success(pos) {
 
   var latPos = document.createElement('p');
   latPos.text = 'Latitude : '+crd.latitude;
-  var divLat = document.getElementById('divLat');
-  divLat.appendChild(latPos);
+  var divCoords = document.getElementById('divCoords');
+  divCoords.appendChild(latPos);
 
   console.log('Votre position actuelle est :');
   console.log('Latitude : '+crd.latitude);
