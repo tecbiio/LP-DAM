@@ -11,7 +11,7 @@ function success(pos) {
   document.getElementById("lon").innerHTML = 'Longitude : '+crd.longitude;
   document.getElementById("pre").innerHTML = 'Précision : '+crd.accuracy;
   document.getElementById("spe").innerHTML = 'Vitesse : '+crd.speed;
-  document.getElementById("tim").innerHTML = 'TimeStamp : '+new Date(crd.timestamp);
+  document.getElementById("tim").innerHTML = 'TimeStamp : '+crd.timestamp;
 }
 
 function error(err) {
