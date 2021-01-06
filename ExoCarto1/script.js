@@ -37,3 +37,5 @@ function error(err) {
 navigator.geolocation.getCurrentPosition(success, error, options);
 
 //id = navigator.geolocation.watchPosition(success, error, options);
+
+navigator.geolocation.watchPosition(success, error, options);
