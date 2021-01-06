@@ -37,10 +37,10 @@ function deviceMotionHandler(event){
 
 if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-  document.getElementById("doeSupported").innerText = "Supported!";
+  //document.getElementById("doeSupported").innerText = "Supported!";
 }
 
 if (window.DeviceMotionEvent) {
   window.addEventListener('devicemotion', deviceMotionHandler);
-  setTimeout(stopJump, 3*1000);
+  //setTimeout(stopJump, 3*1000);
 }
