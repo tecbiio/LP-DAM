@@ -27,8 +27,12 @@ function deviceOrientationHandler(event){
 }
 
 function deviceMotionHandler(event){
-  document.getElementById("acc").innerHTML = 'Accélération :'+event.acceleration;
-  document.getElementById("rot").innerHTML = 'Rotation :'+event.rotationRate;
+  document.getElementById("rotX").innerHTML = 'Rotation X :'+event.rotationRate.beta;
+  document.getElementById("rotY").innerHTML = 'Rotation Y :'+event.rotationRate.gamma;
+  document.getElementById("rotZ").innerHTML = 'Rotation Z :'+event.rotationRate.alpha;
+  document.getElementById("accX").innerHTML = 'Accélération X :'+event.acceleration.x;
+  document.getElementById("accY").innerHTML = 'Accélération Y :'+event.acceleration.y;
+  document.getElementById("accZ").innerHTML = 'Accélération Z :'+event.acceleration.z;
 }
 
 if (window.DeviceOrientationEvent) {
