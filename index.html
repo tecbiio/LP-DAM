@@ -1,11 +1,14 @@
 <doctype html>
 	<html lang="fr">
 	<head>
-		<title>MyPage</title>
+		<title>TD2</title>
 		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin=""/>
 	</head>
 	<body>
-		<h1>Exercice 2</h1>
+		<h1>Exercice 1</h1>
 		<ul>
 			<li id="lat"></li>
 			<li id="lon"></li>
@@ -13,25 +16,11 @@
 			<li id="spe"></li>
 			<li id="tim"></li>
 		</ul>
-		<h1>Exercice 3</h1>
-		<ul>
-			<li id="alp"></li>
-			<li id="bet"></li>
-			<li id="gam"></li>
-			<li>Rotation</li>
-			<ul>
-				<li id="rotX"></li>
-				<li id="rotY"></li>
-				<li id="rotZ"></li>
-			</ul>
-			<li>Accélération</li>
-			<ul>
-				<li id="accX"></li>
-				<li id="accY"></li>
-				<li id="accZ"></li>
-			</ul>
-		</ul>
-		<h1>Exercice 4</h1>
-	<script src="/TD1/script.js"></script>
-</body>
-</html>
+		<div id="mapid" style="height:  90%;"></div>
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+		<script src="TD2/script.js"></script>
+	</body>
+	</html>
