@@ -20,6 +20,8 @@ function success(pos) {
     var bermudesLon = -64.7670827;
     var marseilleLat = 43.296482;
     var marseilleLon = 5.36978;
+    // Rayon de la Terre
+    var R = 6371000;
 
     // MAP STAMEN
     // replace "toner" here with "terrain" or "watercolor"
@@ -48,7 +50,7 @@ function success(pos) {
     }).addTo(map);
 
     // Distance de myPosition à Marseille
-    var dist = 2*coords.accuracy*Math.asin(Math.sqrt(Math.pow(Math.sin((coords.latitude-marseilleLat)/2), 2)+Math.cos(marseilleLat)*Math.cos(coords.latitude)*Math.pow(Math.sin((coords.longitude-marseilleLon)/2), 2)));
+    var dist = 2*R*Math.asin(Math.sqrt(Math.pow(Math.sin(((coords.latitude-marseilleLat)/2)*Math.PI/180), 2)+Math.cos(marseilleLat*(Math.PI/180))*Math.cos(coords.latitude*(Math.PI/180))*Math.pow(Math.sin(((coords.longitude-marseilleLon)/2)*(Math.PI/180)), 2)));
     document.getElementById("distance").innerHTML = 'Distance de ma position à Marseille : '+dist;
 
     container = true;
