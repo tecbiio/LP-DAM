@@ -52,7 +52,7 @@ function success(pos) {
     // Distance de myPosition à Marseille
     var dist = 2*R*Math.asin(Math.sqrt(Math.pow(Math.sin(((coords.latitude-marseilleLat)/2)*Math.PI/180), 2)+Math.cos(marseilleLat*(Math.PI/180))*Math.cos(coords.latitude*(Math.PI/180))*Math.pow(Math.sin(((coords.longitude-marseilleLon)/2)*(Math.PI/180)), 2)));
     document.getElementById("distance").innerHTML = 'Distance de ma position à Marseille : '+dist;
-
+    
     container = true;
   }
 }
