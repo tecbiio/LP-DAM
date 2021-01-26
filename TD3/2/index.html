@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 1.2 : Dessiner avec un SVG</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body onload="draw();">
+    <h1>Exercice 1.2 : Dessiner avec un SVG</h1>
+    <svg width="800" height="600">
+        <!-- Prairie -->
+        <rect width="500" height="280" fill="green" />
+        <!-- Ciel -->
+        <rect width="500" height="180" fill="#0070ff" opacity="1" />
+        <!-- Montagnes -->
+        <polygon points="0,50 -50,180 50,180" style="fill:rgb(255, 102, 0);stroke:purple;stroke-width:1" />
+        <polygon points="50,50 0,180 100,180" style="fill:rgb(255, 102, 0);stroke:purple;stroke-width:1" />
+        <polygon points="100,50 50,180 150,180" style="fill:rgb(255, 102, 0);stroke:purple;stroke-width:1" />
+        <polygon points="150,50 100,180 200,180" style="fill:rgb(255, 102, 0);stroke:purple;stroke-width:1" />
+        <polygon points="200,50 150,180 250,180" style="fill:rgb(255, 102, 0);stroke:purple;stroke-width:1" />
+        <!-- Soleil -->
+        <ellipse cx="400" cy="80" rx="50" ry="50" fill="yellow" />
+        <!-- Toit maison -->
+        <polygon points="60,120 20,160 100,160" style="fill:rgb(255, 25, 25);" />
+        <!-- Maison -->
+        <polygon points="100,160 100,240 20,240 20,160" style="fill:#cf800a;stroke:#5e2805;stroke-width:1" />
+        <!-- Porte -->
+        <polygon points="60,210 60,240 40,240 40,210" style="fill:#5e2805;stroke:hsl(0, 91%, 43%);stroke-width:1" />
+    </svg>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
+</html>
