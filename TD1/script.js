@@ -18,10 +18,11 @@ function error(err) {
   console.warn('ERREUR ('+err.code+'): '+err.message);
 }
 
-function deviceOrientationHandler(evt){
-  document.getElementById("alp").innerHTML = 'Alpha : '+evt.alpha;
-  document.getElementById("bet").innerHTML = 'Beta : '+evt.beta;
-  document.getElementById("gam").innerHTML = 'Gamma : '+evt.gamma;
+function handleOrientation(event){
+  console.log(event.alpha);
+  document.getElementById("alp").innerHTML = 'Alpha : '+event.alpha;
+  document.getElementById("bet").innerHTML = 'Beta : '+event.beta;
+  document.getElementById("gam").innerHTML = 'Gamma : '+event.gamma;
 }
 
 function deviceMotionHandler(evt){
@@ -35,6 +36,6 @@ function deviceMotionHandler(evt){
 
 navigator.geolocation.watchPosition(success, error, options);
 
-window.addEventListener('deviceorientation', deviceOrientationHandler);
+window.addEventListener('deviceorientation', handleOrientation);
 
 window.addEventListener('devicemotion', deviceMotionHandler);
