@@ -27,7 +27,7 @@ function draw() {
 }
 
 function deviceOrientationHandler(evt){
-  x = evt.alpha;
+  x = -evt.alpha;
 }
 
 if (window.DeviceOrientationEvent) {

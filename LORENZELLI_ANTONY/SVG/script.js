@@ -6,10 +6,8 @@ function init() {
 
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-
-  ctx.clearRect(0, 0, 300, 300);
-
   ctx.save();
+  ctx.clearRect(0, 0, 1000, 1000);
   ctx.translate(600, 200);
   ctx.beginPath();
   ctx.lineWidth = 14;
@@ -18,7 +16,6 @@ function draw() {
   ctx.stroke();
   ctx.restore();
 
-  // Aiguille des secondes
   ctx.save();
   ctx.translate(600, 200);
   ctx.rotate(x*(Math.PI/180));
