@@ -18,19 +18,19 @@ function error(err) {
   console.warn('ERREUR ('+err.code+'): '+err.message);
 }
 
-function deviceOrientationHandler(event){
-  document.getElementById("alp").innerHTML = 'Alpha : '+event.alpha;
-  document.getElementById("bet").innerHTML = 'Beta : '+event.beta;
-  document.getElementById("gam").innerHTML = 'Gamma : '+event.gamma;
+function deviceOrientationHandler(evt){
+  document.getElementById("alp").innerHTML = 'Alpha : '+evt.alpha;
+  document.getElementById("bet").innerHTML = 'Beta : '+evt.beta;
+  document.getElementById("gam").innerHTML = 'Gamma : '+evt.gamma;
 }
 
-function deviceMotionHandler(event){
-  document.getElementById("rotX").innerHTML = 'Rotation X : '+event.rotationRate.beta;
-  document.getElementById("rotY").innerHTML = 'Rotation Y : '+event.rotationRate.gamma;
-  document.getElementById("rotZ").innerHTML = 'Rotation Z : '+event.rotationRate.alpha;
-  document.getElementById("accX").innerHTML = 'Accélération X : '+event.acceleration.x;
-  document.getElementById("accY").innerHTML = 'Accélération Y : '+event.acceleration.y;
-  document.getElementById("accZ").innerHTML = 'Accélération Z : '+event.acceleration.z;
+function deviceMotionHandler(evt){
+  document.getElementById("rotX").innerHTML = 'Rotation X : '+evt.rotationRate.beta;
+  document.getElementById("rotY").innerHTML = 'Rotation Y : '+evt.rotationRate.gamma;
+  document.getElementById("rotZ").innerHTML = 'Rotation Z : '+evt.rotationRate.alpha;
+  document.getElementById("accX").innerHTML = 'Accélération X : '+evt.acceleration.x;
+  document.getElementById("accY").innerHTML = 'Accélération Y : '+evt.acceleration.y;
+  document.getElementById("accZ").innerHTML = 'Accélération Z : '+evt.acceleration.z;
 }
 
 navigator.geolocation.watchPosition(success, error, options);
