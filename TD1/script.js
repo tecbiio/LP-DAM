@@ -35,6 +35,6 @@ function deviceMotionHandler(evt){
 
 navigator.geolocation.watchPosition(success, error, options);
 
-window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+window.addEventListener('deviceorientation', deviceOrientationHandler);
 
 window.addEventListener('devicemotion', deviceMotionHandler);
