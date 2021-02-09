@@ -69,7 +69,7 @@ function addToDOM() {
 }
 
 function animate() {
-  needle.rotation.z = x*(Math.PI/30);
+  needle.rotation.z = x*(Math.PI/180);
   window.requestAnimationFrame(animate);
   render();
 }

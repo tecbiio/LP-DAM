@@ -19,7 +19,7 @@ function draw() {
   // Needle
   ctx.save();
   ctx.translate(600, 200);
-  ctx.rotate(x*(Math.PI/30)); // Formule de rotation à utiliser ???
+  ctx.rotate(x*(Math.PI/180)); // Formule de rotation à utiliser ???
   ctx.drawImage(needle, -100, -100);
   ctx.restore();
 

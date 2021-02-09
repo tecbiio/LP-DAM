@@ -21,7 +21,7 @@ function draw() {
   // Aiguille des secondes
   ctx.save();
   ctx.translate(600, 200);
-  ctx.rotate(x*(Math.PI/30));
+  ctx.rotate(x*(Math.PI/180));
   ctx.strokeStyle = "#D40000";
   ctx.fillStyle = "#D40000";
   ctx.lineWidth = 6;
