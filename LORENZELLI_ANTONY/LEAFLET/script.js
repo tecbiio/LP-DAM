@@ -34,11 +34,8 @@ function success(pos) {
     map.addControl( new L.Control.Compass({autoActive: true, showDigit: true}) );
 
     container = true;
-    window.requestAnimationFrame(success);
   }
 }
-
-window.requestAnimationFrame(success);
 
 function error(err) {
   console.warn('ERREUR ('+err.code+'): '+err.message);
