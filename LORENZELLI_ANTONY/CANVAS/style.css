@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+	padding: 0;
+}
+
+#compass {
+    max-height: 333px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#needle {
+    max-height: 333px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#canvas {
+    border: 1px solid black;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
